@@ -1,0 +1,45 @@
+﻿<Window x:Class="Lab8.MVVM.View.Receptions.RequestReception"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8.MVVM.View.Receptions"
+        mc:Ignorable="d"
+        Title="Запрос с параметрами" 
+        WindowStartupLocation="CenterScreen"
+        Style="{DynamicResource CUDWindowTheme}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0"
+               Grid.Column="0"
+               Content="Дата приёма:"/>
+            <TextBox x:Name="mFieldDate" Grid.Row="0"
+                     Grid.Column="1"/>
+        </Grid>
+
+        <Button Grid.Row="1"
+                Width="Auto"
+                Content="Выполнить запрос"
+                x:Name="mButtonRequest"
+                Click="mButtonRequest_Click"
+                Style="{DynamicResource ButtonTheme}"/>
+
+    </Grid>
+    
+</Window>

@@ -1,0 +1,37 @@
+﻿<Application x:Class="Lab8.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Lab8"
+             xmlns:viewModel="clr-namespace:Lab8.MVVM.ViewModel"
+             xmlns:view="clr-namespace:Lab8.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/ButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/DataGridTheme.xaml"/>
+                <ResourceDictionary Source="Theme/AppColors.xaml"/>
+                <ResourceDictionary Source="Theme/ColumnElementTheme.xaml"/>
+                <ResourceDictionary Source="Theme/CUDWindowTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:DoctorsViewModel}">
+                <view:DoctorsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:SpecialtyesViewModel}">
+                <view:SpecialtyesView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:PatientsViewModel}">
+                <view:PatientsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ReceptionsViewModel}">
+                <view:ReceptionsView/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

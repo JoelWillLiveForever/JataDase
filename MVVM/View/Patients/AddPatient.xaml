@@ -1,0 +1,94 @@
+﻿<Window x:Class="Lab8.MVVM.View.Patients.AddPatient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab8.MVVM.View.Patients"
+        mc:Ignorable="d"
+        Title="Добавить пациента"  
+        WindowStartupLocation="CenterScreen" 
+        Style="{DynamicResource CUDWindowTheme}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0"
+              Margin="0"
+              VerticalAlignment="Top">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0"
+               Grid.Column="0"
+               Content="Фамилия:"/>
+            <TextBox x:Name="mFieldSurname" Grid.Row="0"
+                 Grid.Column="1"/>
+
+            <Label Grid.Row="1"
+               Grid.Column="0"
+               Content="Имя:"/>
+            <TextBox x:Name="mFieldName" Grid.Row="1"
+                 Grid.Column="1"/>
+
+            <Label Grid.Row="2"
+               Grid.Column="0"
+               Content="Отчество:"/>
+            <TextBox x:Name="mFieldLastname" Grid.Row="2"
+                 Grid.Column="1"/>
+
+            <Label Grid.Row="3"
+               Grid.Column="0"
+               Content="Пол:"/>
+            <ComboBox x:Name="mListGender"
+                      SelectedIndex="0"
+                      Grid.Row="3"
+                      Grid.Column="1">
+                <ComboBoxItem>Мужской</ComboBoxItem>
+                <ComboBoxItem>Женский</ComboBoxItem>
+            </ComboBox>
+
+            <Label Grid.Row="4"
+               Grid.Column="0"
+               Content="Дата рождения:"/>
+            <TextBox x:Name="mFieldBirthday" Grid.Row="4"
+                     Grid.Column="1"/>
+
+            <Label Grid.Row="5"
+               Grid.Column="0"
+               Content="Адрес:"/>
+            <TextBox x:Name="mFieldAddress" Grid.Row="5"
+                 Grid.Column="1"/>
+
+            <Label Grid.Row="6"
+               Grid.Column="0"
+               Content="Телефон:"/>
+            <TextBox x:Name="mFieldPhone" Grid.Row="6"
+                 Grid.Column="1"/>
+        </Grid>
+
+        <Button Grid.Row="1"
+                Width="Auto"
+                Content="Добавить пациента"
+                x:Name="mButtonAdd"
+                Click="mButtonAdd_Click"
+                Style="{DynamicResource ButtonTheme}"/>
+
+    </Grid>
+
+</Window>

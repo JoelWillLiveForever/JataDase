@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="BackgroundColor">#251e1c</Color>
+    <Color x:Key="PrimaryColor">#ffab91</Color>
+    <Color x:Key="PrimaryLightColor">#ffddc1</Color>
+    <Color x:Key="PrimaryDarkColor">#c97b63</Color>
+    <Color x:Key="TextLightColor">#deffffff</Color>
+    <Color x:Key="TextDarkColor">#de000000</Color>
+    <Color x:Key="TextInactiveColor">#61ffffff</Color>
+    <Color x:Key="SurfaceColor">#3dffab91</Color>
+    <Color x:Key="FocusedColor">#1fffffff</Color>
+
+    
+    <SolidColorBrush x:Key="Background" 
+                     Color="{DynamicResource BackgroundColor}"/>
+    <SolidColorBrush x:Key="Primary" 
+                     Color="{DynamicResource PrimaryColor}"/>
+    <SolidColorBrush x:Key="PrimaryLight" 
+                     Color="{DynamicResource PrimaryLightColor}"/>
+    <SolidColorBrush x:Key="PrimaryDark" 
+                     Color="{DynamicResource PrimaryDarkColor}"/>
+    <SolidColorBrush x:Key="TextLight" 
+                     Color="{DynamicResource TextLightColor}"/>
+    <SolidColorBrush x:Key="TextDark" 
+                     Color="{DynamicResource TextDarkColor}"/>
+    <SolidColorBrush x:Key="TextInactive" 
+                     Color="{DynamicResource TextInactiveColor}"/>
+    <SolidColorBrush x:Key="Surface" 
+                     Color="{DynamicResource SurfaceColor}"/>
+    <SolidColorBrush x:Key="Focused" 
+                     Color="{DynamicResource FocusedColor}"/>
+    
+    
+    
+    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                     Color="{DynamicResource FocusedColor}"/>
+    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" 
+                     Color="{DynamicResource FocusedColor}"/>
+    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" 
+                     Color="{DynamicResource TextLightColor}"/>
+    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" 
+                     Color="{DynamicResource TextInactiveColor}"/>
+</ResourceDictionary>
